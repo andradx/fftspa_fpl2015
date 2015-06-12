@@ -5,7 +5,7 @@ In this project you can find the source code referring to the FFT-SPA Non-binary
 * (*) Instituto de Telecomunicações, Dept. Electrical and Computer Engineering, University of Coimbra, Portugal
 http://www.it.pt/?msp-co
 
-^ (^)École Polytechnique Fédérale de Lausanne, School of Computer and Communication Sciences, Lausanne, Switzerland
+* (^)École Polytechnique Fédérale de Lausanne, School of Computer and Communication Sciences, Lausanne, Switzerland
 http://www.lap.epfl.ch
 
 + (+)Xilinx Research Labs, Dublin, Ireland 
