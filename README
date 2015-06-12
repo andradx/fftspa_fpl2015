@@ -1,0 +1,9 @@
+README - Vivado HLS 2014.2 is required to run this project
+
+
+
+To create project:
+
+vivado_hls -f create_project.tcl
+
+
