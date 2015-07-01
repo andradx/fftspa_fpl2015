@@ -528,7 +528,7 @@ void vn_proc(llr input[GF*VARIABLE_NUM],llr mvc[GF*TOTAL_EDGE], llr mcv[GF*TOTAL
 
 
 
-void edge(llr mvc[GF*TOTAL_EDGE],int matValue[TOTAL_EDGE],int limit){
+void permute(llr mvc[GF*TOTAL_EDGE],int matValue[TOTAL_EDGE],int limit){
 	llr tmp[GF];
 	int idx;
 
@@ -585,7 +585,7 @@ void cn_proc(llr mvc[GF*TOTAL_EDGE], llr mcv[GF*TOTAL_EDGE],int limit){
 
 
 
-void inv_edge(llr mcv[GF*TOTAL_EDGE],int matValue[TOTAL_EDGE],int limit){
+void depermute(llr mcv[GF*TOTAL_EDGE],int matValue[TOTAL_EDGE],int limit){
 	llr tmp[GF];
 	int idx;
 	//float l_mcv[GF*TOTAL_EDGE];
@@ -606,7 +606,7 @@ void inv_edge(llr mcv[GF*TOTAL_EDGE],int matValue[TOTAL_EDGE],int limit){
 
 
 
-void fft(llr m[GF*TOTAL_EDGE],int FFTSQ[LOG_GF*GF],int limit){
+void fwht(llr m[GF*TOTAL_EDGE],int FFTSQ[LOG_GF*GF],int limit){
 	//int e = i/GF;
 	hadamard_llr A[2];
 	hadamard_llr mStage[LOG_GF+1][GF];
@@ -677,7 +677,7 @@ void hdDataflow(volatile int *decisions,volatile llr* probabilities)
 
 	decideP(l_input,l_mvc,l_mcv,l_interleaver,l_matValue,VARIABLE_NUM);
 
-	fft(l_mvc,FFTSQ,TOTAL_EDGE);
+	fwht(l_mvc,FFTSQ,TOTAL_EDGE);
 
 	decideB(l_mvc,l_decisionB,l_interleaver,VARIABLE_NUM);
 
